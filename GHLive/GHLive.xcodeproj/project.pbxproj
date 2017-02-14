@@ -15,6 +15,16 @@
 		388ED4F11E529702009BF47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388ED4EF1E529702009BF47A /* LaunchScreen.storyboard */; };
 		388ED4FC1E529702009BF47A /* GHLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4FB1E529702009BF47A /* GHLiveTests.m */; };
 		388ED5071E529702009BF47A /* GHLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5061E529702009BF47A /* GHLiveUITests.m */; };
+		388ED52E1E52E25E009BF47A /* GHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED52D1E52E25E009BF47A /* GHLoginViewController.m */; };
+		388ED5311E52E292009BF47A /* GHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5301E52E292009BF47A /* GHMainViewController.m */; };
+		388ED5571E52E498009BF47A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5561E52E498009BF47A /* Reachability.m */; };
+		388ED55A1E52E64A009BF47A /* GHNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5591E52E64A009BF47A /* GHNavViewController.m */; };
+		388ED5631E52EF89009BF47A /* titlebar_more_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 388ED5621E52EF89009BF47A /* titlebar_more_@2x.png */; };
+		388ED5661E52F079009BF47A /* GHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5651E52F079009BF47A /* GHHomeViewController.m */; };
+		388ED56A1E52F0D1009BF47A /* GHShowTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5681E52F0D1009BF47A /* GHShowTimeViewController.m */; };
+		388ED56B1E52F0D1009BF47A /* GHShowTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 388ED5691E52F0D1009BF47A /* GHShowTimeViewController.xib */; };
+		388ED56E1E52F135009BF47A /* GHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED56D1E52F135009BF47A /* GHProfileViewController.m */; };
+		3A8B9E67E4D541993EBA9F30 /* libPods-GHLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF6D3CDD7EE6835179FDC8D /* libPods-GHLive.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,25 @@
 		388ED5021E529702009BF47A /* GHLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		388ED5061E529702009BF47A /* GHLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHLiveUITests.m; sourceTree = "<group>"; };
 		388ED5081E529702009BF47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388ED52C1E52E25E009BF47A /* GHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHLoginViewController.h; sourceTree = "<group>"; };
+		388ED52D1E52E25E009BF47A /* GHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHLoginViewController.m; sourceTree = "<group>"; };
+		388ED52F1E52E292009BF47A /* GHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHMainViewController.h; sourceTree = "<group>"; };
+		388ED5301E52E292009BF47A /* GHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHMainViewController.m; sourceTree = "<group>"; };
+		388ED5551E52E498009BF47A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		388ED5561E52E498009BF47A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		388ED5581E52E64A009BF47A /* GHNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNavViewController.h; sourceTree = "<group>"; };
+		388ED5591E52E64A009BF47A /* GHNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNavViewController.m; sourceTree = "<group>"; };
+		388ED5621E52EF89009BF47A /* titlebar_more_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titlebar_more_@2x.png"; sourceTree = "<group>"; };
+		388ED5641E52F079009BF47A /* GHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHHomeViewController.h; sourceTree = "<group>"; };
+		388ED5651E52F079009BF47A /* GHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHHomeViewController.m; sourceTree = "<group>"; };
+		388ED5671E52F0D1009BF47A /* GHShowTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHShowTimeViewController.h; sourceTree = "<group>"; };
+		388ED5681E52F0D1009BF47A /* GHShowTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHShowTimeViewController.m; sourceTree = "<group>"; };
+		388ED5691E52F0D1009BF47A /* GHShowTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHShowTimeViewController.xib; sourceTree = "<group>"; };
+		388ED56C1E52F135009BF47A /* GHProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHProfileViewController.h; sourceTree = "<group>"; };
+		388ED56D1E52F135009BF47A /* GHProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHProfileViewController.m; sourceTree = "<group>"; };
+		55FE8FA2CCF88B10B59A267F /* Pods-GHLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHLive/Pods-GHLive.debug.xcconfig"; sourceTree = "<group>"; };
+		DFAE12842D0B89D36C461BBB /* Pods-GHLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHLive/Pods-GHLive.release.xcconfig"; sourceTree = "<group>"; };
+		EDF6D3CDD7EE6835179FDC8D /* libPods-GHLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8B9E67E4D541993EBA9F30 /* libPods-GHLive.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +115,8 @@
 				388ED4FA1E529702009BF47A /* GHLiveTests */,
 				388ED5051E529702009BF47A /* GHLiveUITests */,
 				388ED4DF1E529702009BF47A /* Products */,
+				4CC490602A6CDAC0838221DA /* Pods */,
+				C537418B20B5CC6C6FD48D8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +200,8 @@
 		388ED5231E529AF9009BF47A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				388ED5641E52F079009BF47A /* GHHomeViewController.h */,
+				388ED5651E52F079009BF47A /* GHHomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -175,6 +209,8 @@
 		388ED5241E529AF9009BF47A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				388ED52C1E52E25E009BF47A /* GHLoginViewController.h */,
+				388ED52D1E52E25E009BF47A /* GHLoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -182,6 +218,10 @@
 		388ED5251E529AF9009BF47A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				388ED52F1E52E292009BF47A /* GHMainViewController.h */,
+				388ED5301E52E292009BF47A /* GHMainViewController.m */,
+				388ED5581E52E64A009BF47A /* GHNavViewController.h */,
+				388ED5591E52E64A009BF47A /* GHNavViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -189,6 +229,8 @@
 		388ED5261E529AF9009BF47A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				388ED5551E52E498009BF47A /* Reachability.h */,
+				388ED5561E52E498009BF47A /* Reachability.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -203,6 +245,8 @@
 		388ED5281E529AF9009BF47A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				388ED56C1E52F135009BF47A /* GHProfileViewController.h */,
+				388ED56D1E52F135009BF47A /* GHProfileViewController.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -210,6 +254,7 @@
 		388ED5291E529AF9009BF47A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				388ED5621E52EF89009BF47A /* titlebar_more_@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -217,6 +262,9 @@
 		388ED52A1E529AF9009BF47A /* ShowTime */ = {
 			isa = PBXGroup;
 			children = (
+				388ED5671E52F0D1009BF47A /* GHShowTimeViewController.h */,
+				388ED5681E52F0D1009BF47A /* GHShowTimeViewController.m */,
+				388ED5691E52F0D1009BF47A /* GHShowTimeViewController.xib */,
 			);
 			path = ShowTime;
 			sourceTree = "<group>";
@@ -228,6 +276,23 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		4CC490602A6CDAC0838221DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55FE8FA2CCF88B10B59A267F /* Pods-GHLive.debug.xcconfig */,
+				DFAE12842D0B89D36C461BBB /* Pods-GHLive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C537418B20B5CC6C6FD48D8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDF6D3CDD7EE6835179FDC8D /* libPods-GHLive.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,9 +300,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 388ED50B1E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLive" */;
 			buildPhases = (
+				46A19E6849CDB2F86B116172 /* [CP] Check Pods Manifest.lock */,
 				388ED4DA1E529702009BF47A /* Sources */,
 				388ED4DB1E529702009BF47A /* Frameworks */,
 				388ED4DC1E529702009BF47A /* Resources */,
+				57701FD95A1724869BFBA2D9 /* [CP] Embed Pods Frameworks */,
+				804CF0E6CC54171884E47425 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,7 +405,9 @@
 			files = (
 				388ED4F11E529702009BF47A /* LaunchScreen.storyboard in Resources */,
 				388ED4EE1E529702009BF47A /* Assets.xcassets in Resources */,
+				388ED5631E52EF89009BF47A /* titlebar_more_@2x.png in Resources */,
 				388ED4EC1E529702009BF47A /* Main.storyboard in Resources */,
+				388ED56B1E52F0D1009BF47A /* GHShowTimeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,12 +427,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46A19E6849CDB2F86B116172 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57701FD95A1724869BFBA2D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GHLive/Pods-GHLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		804CF0E6CC54171884E47425 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GHLive/Pods-GHLive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		388ED4DA1E529702009BF47A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				388ED56A1E52F0D1009BF47A /* GHShowTimeViewController.m in Sources */,
+				388ED5661E52F079009BF47A /* GHHomeViewController.m in Sources */,
 				388ED4E91E529702009BF47A /* ViewController.m in Sources */,
+				388ED55A1E52E64A009BF47A /* GHNavViewController.m in Sources */,
+				388ED5571E52E498009BF47A /* Reachability.m in Sources */,
+				388ED52E1E52E25E009BF47A /* GHLoginViewController.m in Sources */,
+				388ED5311E52E292009BF47A /* GHMainViewController.m in Sources */,
+				388ED56E1E52F135009BF47A /* GHProfileViewController.m in Sources */,
 				388ED4E61E529702009BF47A /* AppDelegate.m in Sources */,
 				388ED4E31E529702009BF47A /* main.m in Sources */,
 			);
@@ -511,9 +636,11 @@
 		};
 		388ED50C1E529702009BF47A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55FE8FA2CCF88B10B59A267F /* Pods-GHLive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3L99Q7H8MX;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = GHLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLive;
@@ -525,9 +652,11 @@
 		};
 		388ED50D1E529702009BF47A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFAE12842D0B89D36C461BBB /* Pods-GHLive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3L99Q7H8MX;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = GHLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLive;

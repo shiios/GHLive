@@ -7,16 +7,29 @@
 //
 
 #import "AppDelegate.h"
+#import "GHLoginViewController.h"
+#import "Reachability.h"
 
 @interface AppDelegate ()
-
+{
+    Reachability *_reacha;
+    NetworkStatus _preStatus;
+}
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.rootViewController = [[GHLoginViewController alloc] init];
+    
+    [self.window makeKeyAndVisible];
+    
+    //[self checkNetworkStates];
+    
     return YES;
 }
 
