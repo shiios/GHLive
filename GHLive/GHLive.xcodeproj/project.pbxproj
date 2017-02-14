@@ -101,6 +101,7 @@
 		388ED4E01E529702009BF47A /* GHLive */ = {
 			isa = PBXGroup;
 			children = (
+				388ED5211E529AF9009BF47A /* Classes */,
 				388ED4E41E529702009BF47A /* AppDelegate.h */,
 				388ED4E51E529702009BF47A /* AppDelegate.m */,
 				388ED4E71E529702009BF47A /* ViewController.h */,
@@ -138,6 +139,93 @@
 				388ED5081E529702009BF47A /* Info.plist */,
 			);
 			path = GHLiveUITests;
+			sourceTree = "<group>";
+		};
+		388ED5211E529AF9009BF47A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				388ED5221E529AF9009BF47A /* Frameworks */,
+				388ED5231E529AF9009BF47A /* Home */,
+				388ED5241E529AF9009BF47A /* Login */,
+				388ED5251E529AF9009BF47A /* Main */,
+				388ED5261E529AF9009BF47A /* Network */,
+				388ED5271E529AF9009BF47A /* Other */,
+				388ED5281E529AF9009BF47A /* Profile */,
+				388ED5291E529AF9009BF47A /* Resource */,
+				388ED52A1E529AF9009BF47A /* ShowTime */,
+				388ED52B1E529AF9009BF47A /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		388ED5221E529AF9009BF47A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		388ED5231E529AF9009BF47A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		388ED5241E529AF9009BF47A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		388ED5251E529AF9009BF47A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		388ED5261E529AF9009BF47A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		388ED5271E529AF9009BF47A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		388ED5281E529AF9009BF47A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		388ED5291E529AF9009BF47A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		388ED52A1E529AF9009BF47A /* ShowTime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShowTime;
+			sourceTree = "<group>";
+		};
+		388ED52B1E529AF9009BF47A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,6 +602,7 @@
 				388ED50D1E529702009BF47A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		388ED50E1E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLiveTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +611,7 @@
 				388ED5101E529702009BF47A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		388ED5111E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLiveUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +620,7 @@
 				388ED5131E529702009BF47A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
