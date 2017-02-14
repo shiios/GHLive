@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		388ED4E31E529702009BF47A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E21E529702009BF47A /* main.m */; };
+		388ED4E61E529702009BF47A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E51E529702009BF47A /* AppDelegate.m */; };
+		388ED4E91E529702009BF47A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E81E529702009BF47A /* ViewController.m */; };
+		388ED4EC1E529702009BF47A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388ED4EA1E529702009BF47A /* Main.storyboard */; };
+		388ED4EE1E529702009BF47A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388ED4ED1E529702009BF47A /* Assets.xcassets */; };
+		388ED4F11E529702009BF47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388ED4EF1E529702009BF47A /* LaunchScreen.storyboard */; };
+		388ED4FC1E529702009BF47A /* GHLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4FB1E529702009BF47A /* GHLiveTests.m */; };
+		388ED5071E529702009BF47A /* GHLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5061E529702009BF47A /* GHLiveUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		388ED4F81E529702009BF47A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 388ED4D61E529702009BF47A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 388ED4DD1E529702009BF47A;
+			remoteInfo = GHLive;
+		};
+		388ED5031E529702009BF47A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 388ED4D61E529702009BF47A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 388ED4DD1E529702009BF47A;
+			remoteInfo = GHLive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		388ED4DE1E529702009BF47A /* GHLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		388ED4E21E529702009BF47A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		388ED4E41E529702009BF47A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		388ED4E51E529702009BF47A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		388ED4E71E529702009BF47A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		388ED4E81E529702009BF47A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		388ED4EB1E529702009BF47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		388ED4ED1E529702009BF47A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		388ED4F01E529702009BF47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		388ED4F21E529702009BF47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388ED4F71E529702009BF47A /* GHLiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		388ED4FB1E529702009BF47A /* GHLiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHLiveTests.m; sourceTree = "<group>"; };
+		388ED4FD1E529702009BF47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388ED5021E529702009BF47A /* GHLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		388ED5061E529702009BF47A /* GHLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHLiveUITests.m; sourceTree = "<group>"; };
+		388ED5081E529702009BF47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		388ED4DB1E529702009BF47A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388ED4F41E529702009BF47A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388ED4FF1E529702009BF47A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		388ED4D51E529702009BF47A = {
+			isa = PBXGroup;
+			children = (
+				388ED4E01E529702009BF47A /* GHLive */,
+				388ED4FA1E529702009BF47A /* GHLiveTests */,
+				388ED5051E529702009BF47A /* GHLiveUITests */,
+				388ED4DF1E529702009BF47A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		388ED4DF1E529702009BF47A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				388ED4DE1E529702009BF47A /* GHLive.app */,
+				388ED4F71E529702009BF47A /* GHLiveTests.xctest */,
+				388ED5021E529702009BF47A /* GHLiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		388ED4E01E529702009BF47A /* GHLive */ = {
+			isa = PBXGroup;
+			children = (
+				388ED4E41E529702009BF47A /* AppDelegate.h */,
+				388ED4E51E529702009BF47A /* AppDelegate.m */,
+				388ED4E71E529702009BF47A /* ViewController.h */,
+				388ED4E81E529702009BF47A /* ViewController.m */,
+				388ED4EA1E529702009BF47A /* Main.storyboard */,
+				388ED4ED1E529702009BF47A /* Assets.xcassets */,
+				388ED4EF1E529702009BF47A /* LaunchScreen.storyboard */,
+				388ED4F21E529702009BF47A /* Info.plist */,
+				388ED4E11E529702009BF47A /* Supporting Files */,
+			);
+			path = GHLive;
+			sourceTree = "<group>";
+		};
+		388ED4E11E529702009BF47A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				388ED4E21E529702009BF47A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		388ED4FA1E529702009BF47A /* GHLiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				388ED4FB1E529702009BF47A /* GHLiveTests.m */,
+				388ED4FD1E529702009BF47A /* Info.plist */,
+			);
+			path = GHLiveTests;
+			sourceTree = "<group>";
+		};
+		388ED5051E529702009BF47A /* GHLiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				388ED5061E529702009BF47A /* GHLiveUITests.m */,
+				388ED5081E529702009BF47A /* Info.plist */,
+			);
+			path = GHLiveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		388ED4DD1E529702009BF47A /* GHLive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 388ED50B1E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLive" */;
+			buildPhases = (
+				388ED4DA1E529702009BF47A /* Sources */,
+				388ED4DB1E529702009BF47A /* Frameworks */,
+				388ED4DC1E529702009BF47A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GHLive;
+			productName = GHLive;
+			productReference = 388ED4DE1E529702009BF47A /* GHLive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		388ED4F61E529702009BF47A /* GHLiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 388ED50E1E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLiveTests" */;
+			buildPhases = (
+				388ED4F31E529702009BF47A /* Sources */,
+				388ED4F41E529702009BF47A /* Frameworks */,
+				388ED4F51E529702009BF47A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				388ED4F91E529702009BF47A /* PBXTargetDependency */,
+			);
+			name = GHLiveTests;
+			productName = GHLiveTests;
+			productReference = 388ED4F71E529702009BF47A /* GHLiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		388ED5011E529702009BF47A /* GHLiveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 388ED5111E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLiveUITests" */;
+			buildPhases = (
+				388ED4FE1E529702009BF47A /* Sources */,
+				388ED4FF1E529702009BF47A /* Frameworks */,
+				388ED5001E529702009BF47A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				388ED5041E529702009BF47A /* PBXTargetDependency */,
+			);
+			name = GHLiveUITests;
+			productName = GHLiveUITests;
+			productReference = 388ED5021E529702009BF47A /* GHLiveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		388ED4D61E529702009BF47A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = kalian;
+				TargetAttributes = {
+					388ED4DD1E529702009BF47A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3L99Q7H8MX;
+						ProvisioningStyle = Manual;
+					};
+					388ED4F61E529702009BF47A = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 388ED4DD1E529702009BF47A;
+					};
+					388ED5011E529702009BF47A = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 388ED4DD1E529702009BF47A;
+					};
+				};
+			};
+			buildConfigurationList = 388ED4D91E529702009BF47A /* Build configuration list for PBXProject "GHLive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 388ED4D51E529702009BF47A;
+			productRefGroup = 388ED4DF1E529702009BF47A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				388ED4DD1E529702009BF47A /* GHLive */,
+				388ED4F61E529702009BF47A /* GHLiveTests */,
+				388ED5011E529702009BF47A /* GHLiveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		388ED4DC1E529702009BF47A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388ED4F11E529702009BF47A /* LaunchScreen.storyboard in Resources */,
+				388ED4EE1E529702009BF47A /* Assets.xcassets in Resources */,
+				388ED4EC1E529702009BF47A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388ED4F51E529702009BF47A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388ED5001E529702009BF47A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		388ED4DA1E529702009BF47A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388ED4E91E529702009BF47A /* ViewController.m in Sources */,
+				388ED4E61E529702009BF47A /* AppDelegate.m in Sources */,
+				388ED4E31E529702009BF47A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388ED4F31E529702009BF47A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388ED4FC1E529702009BF47A /* GHLiveTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388ED4FE1E529702009BF47A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388ED5071E529702009BF47A /* GHLiveUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		388ED4F91E529702009BF47A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 388ED4DD1E529702009BF47A /* GHLive */;
+			targetProxy = 388ED4F81E529702009BF47A /* PBXContainerItemProxy */;
+		};
+		388ED5041E529702009BF47A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 388ED4DD1E529702009BF47A /* GHLive */;
+			targetProxy = 388ED5031E529702009BF47A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		388ED4EA1E529702009BF47A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				388ED4EB1E529702009BF47A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		388ED4EF1E529702009BF47A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				388ED4F01E529702009BF47A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		388ED5091E529702009BF47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		388ED50A1E529702009BF47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		388ED50C1E529702009BF47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3L99Q7H8MX;
+				INFOPLIST_FILE = GHLive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d56d9056-23f8-40c1-90f0-a0422484852b";
+				PROVISIONING_PROFILE_SPECIFIER = CommonCer;
+			};
+			name = Debug;
+		};
+		388ED50D1E529702009BF47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3L99Q7H8MX;
+				INFOPLIST_FILE = GHLive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d56d9056-23f8-40c1-90f0-a0422484852b";
+				PROVISIONING_PROFILE_SPECIFIER = CommonCer;
+			};
+			name = Release;
+		};
+		388ED50F1E529702009BF47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GHLiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GHLive.app/GHLive";
+			};
+			name = Debug;
+		};
+		388ED5101E529702009BF47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GHLiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GHLive.app/GHLive";
+			};
+			name = Release;
+		};
+		388ED5121E529702009BF47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GHLiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GHLive;
+			};
+			name = Debug;
+		};
+		388ED5131E529702009BF47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GHLiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GHLive;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		388ED4D91E529702009BF47A /* Build configuration list for PBXProject "GHLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				388ED5091E529702009BF47A /* Debug */,
+				388ED50A1E529702009BF47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		388ED50B1E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				388ED50C1E529702009BF47A /* Debug */,
+				388ED50D1E529702009BF47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		388ED50E1E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				388ED50F1E529702009BF47A /* Debug */,
+				388ED5101E529702009BF47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		388ED5111E529702009BF47A /* Build configuration list for PBXNativeTarget "GHLiveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				388ED5121E529702009BF47A /* Debug */,
+				388ED5131E529702009BF47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 388ED4D61E529702009BF47A /* Project object */;
+}
