@@ -28,17 +28,16 @@
 }
 - (void)setUP
 {
-    [self addChildViewController:[[GHHomeViewController alloc] init] imageNamed:@"toolbar_home" title:@"首页"];
+    [self addChildViewController:[[GHHomeViewController alloc] init] imageNamed:@"tabbar_home" title:@"首页"];
     [self addChildViewController:[[GHShowTimeViewController alloc] init] imageNamed:@"toolbar_live" title:@"直播"];
-    [self addChildViewController:[[GHProfileViewController alloc] init] imageNamed:@"toolbar_me" title:@"个人中心"];
+    [self addChildViewController:[[GHProfileViewController alloc] init] imageNamed:@"tabbar_profile" title:@"个人中心"];
 }
 - (void)addChildViewController:(UIViewController *)childController imageNamed:(NSString *)imageName title:(NSString *)titleStr
 {
     GHNavViewController *nav = [[GHNavViewController alloc] initWithRootViewController:childController];
     childController.tabBarItem.image = [UIImage imageNamed:imageName];
-    childController.tabBarItem.selectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_sel", imageName]];
-    
-    [childController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: Color(110.0, 113.0, 117.0),} forState:UIControlStateNormal];
+    childController.tabBarItem.selectedImage = [UIImage imageNamed: imageName];
+    childController.tabBarItem.title = titleStr;
     [self addChildViewController:nav];
 }
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController

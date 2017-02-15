@@ -25,36 +25,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DL-al-WBX">
-                    <rect key="frame" x="8" y="20" width="77" height="30"/>
+                    <rect key="frame" x="8" y="20" width="100" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="ULP-wy-Zvb"/>
-                        <constraint firstAttribute="width" constant="77" id="ybm-vp-RwS"/>
+                        <constraint firstAttribute="width" constant="100" id="ybm-vp-RwS"/>
                     </constraints>
-                    <state key="normal" title="智能美颜">
-                        <color key="titleColor" red="0.26773144666666071" green="1" blue="0.74567246822285194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="智能美颜开启" image="icon_beautifulface_19x19"/>
+                    <state key="selected" title="智能美颜关闭" image="icon_beautifulface_19x19"/>
                     <connections>
                         <action selector="didBeautyBtnClick:" destination="-1" eventType="touchUpInside" id="awd-bD-zS6"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9e-eR-79m">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9e-eR-79m">
                     <rect key="frame" x="233" y="20" width="80" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="FI8-y1-wRK"/>
                         <constraint firstAttribute="width" constant="80" id="sdO-bx-lR5"/>
                     </constraints>
-                    <state key="normal" title="摄像头转换"/>
+                    <state key="normal" image="camera_change_40x40"/>
+                    <state key="selected" image="camera_change_40x40"/>
                     <connections>
                         <action selector="didCaptureBtnClick:" destination="-1" eventType="touchUpInside" id="zCO-wB-D6f"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbM-O6-Lfy">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbM-O6-Lfy">
                     <rect key="frame" x="321" y="20" width="46" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="3VS-iQ-EIR"/>
                         <constraint firstAttribute="width" constant="46" id="4lc-8l-6Wz"/>
                     </constraints>
-                    <state key="normal" title="关闭"/>
+                    <state key="normal" image="user_close_15x15"/>
                     <connections>
                         <action selector="didCloseBtnClick:" destination="-1" eventType="touchUpInside" id="Coz-u4-eRD"/>
                     </connections>
@@ -64,7 +65,7 @@
                     <state key="normal" title="开启直播">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="selected">
+                    <state key="selected" title="结束直播">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -98,4 +99,9 @@
             <point key="canvasLocation" x="42.5" y="59.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="camera_change_40x40" width="40" height="40"/>
+        <image name="icon_beautifulface_19x19" width="19" height="19"/>
+        <image name="user_close_15x15" width="15" height="15"/>
+    </resources>
 </document>

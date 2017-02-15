@@ -17,7 +17,7 @@
 + (void)initialize
 {
     UINavigationBar *bar = [UINavigationBar appearance];
-   [bar setBackgroundImage:[UIImage imageNamed:@"navBar_bg_414x70"] forBarMetrics:UIBarMetricsDefault];}
+   [bar setBackgroundImage:[UIImage imageNamed:@"nav_back"] forBarMetrics:UIBarMetricsDefault];}
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.childViewControllers.count) {

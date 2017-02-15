@@ -21,7 +21,6 @@
 		388ED5311E52E292009BF47A /* GHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5301E52E292009BF47A /* GHMainViewController.m */; };
 		388ED5571E52E498009BF47A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5561E52E498009BF47A /* Reachability.m */; };
 		388ED55A1E52E64A009BF47A /* GHNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5591E52E64A009BF47A /* GHNavViewController.m */; };
-		388ED5631E52EF89009BF47A /* titlebar_more_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 388ED5621E52EF89009BF47A /* titlebar_more_@2x.png */; };
 		388ED5661E52F079009BF47A /* GHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5651E52F079009BF47A /* GHHomeViewController.m */; };
 		388ED56A1E52F0D1009BF47A /* GHShowTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED5681E52F0D1009BF47A /* GHShowTimeViewController.m */; };
 		388ED56B1E52F0D1009BF47A /* GHShowTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 388ED5691E52F0D1009BF47A /* GHShowTimeViewController.xib */; };
@@ -77,7 +76,6 @@
 		388ED5561E52E498009BF47A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		388ED5581E52E64A009BF47A /* GHNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNavViewController.h; sourceTree = "<group>"; };
 		388ED5591E52E64A009BF47A /* GHNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNavViewController.m; sourceTree = "<group>"; };
-		388ED5621E52EF89009BF47A /* titlebar_more_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titlebar_more_@2x.png"; sourceTree = "<group>"; };
 		388ED5641E52F079009BF47A /* GHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHHomeViewController.h; sourceTree = "<group>"; };
 		388ED5651E52F079009BF47A /* GHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHHomeViewController.m; sourceTree = "<group>"; };
 		388ED5671E52F0D1009BF47A /* GHShowTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHShowTimeViewController.h; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 		388ED5291E529AF9009BF47A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				388ED5621E52EF89009BF47A /* titlebar_more_@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -427,7 +424,6 @@
 			files = (
 				388ED4F11E529702009BF47A /* LaunchScreen.storyboard in Resources */,
 				388ED4EE1E529702009BF47A /* Assets.xcassets in Resources */,
-				388ED5631E52EF89009BF47A /* titlebar_more_@2x.png in Resources */,
 				388ED4EC1E529702009BF47A /* Main.storyboard in Resources */,
 				388ED56B1E52F0D1009BF47A /* GHShowTimeViewController.xib in Resources */,
 			);

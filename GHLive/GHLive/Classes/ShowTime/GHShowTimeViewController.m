@@ -62,7 +62,6 @@
     self.beautyBtn.layer.cornerRadius = self.beautyBtn.frame.size.height * 0.5;
     self.beautyBtn.layer.masksToBounds = YES;
     
-    self.startLiveBtn.backgroundColor = KeyColor;
     self.startLiveBtn.layer.cornerRadius = self.startLiveBtn.frame.size.height * 0.5;
     self.startLiveBtn.layer.masksToBounds = YES;
     
