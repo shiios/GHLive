@@ -1,0 +1,29 @@
+//
+//  GHLive-Prefix.pch
+//  GHLive
+//
+//  Created by kalian on 2017/2/15.
+//  Copyright © 2017年 kalian. All rights reserved.
+//
+
+#pragma mark - 自定义NSLog
+
+#ifdef __OBJC__
+
+#ifdef DEBUG
+#define GHLog(FORMAT, ...) fprintf(stderr,"%s:%d\t  %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define GHLog(FORMAT, ...) nil
+#endif
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "XRCarouselView.h"
+#import "GHConstant.h"
+
+#endif /* PrefixHeader_pch */
+
+
+#endif

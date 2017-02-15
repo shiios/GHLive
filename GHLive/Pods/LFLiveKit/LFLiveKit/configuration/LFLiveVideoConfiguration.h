@@ -2,8 +2,8 @@
 //  LFLiveVideoConfiguration.h
 //  LFLiveKit
 //
-//  Created by 倾慕 on 16/5/1.
-//  Copyright © 2016年 倾慕. All rights reserved.
+//  Created by LaiFeng on 16/5/20.
+//  Copyright © 2016年 LaiFeng All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -51,17 +51,23 @@ typedef NS_ENUM (NSUInteger, LFLiveVideoQuality){
 + (instancetype)defaultConfigurationForQuality:(LFLiveVideoQuality)videoQuality;
 
 /// 视频配置(质量 & 是否是横屏)
-+ (instancetype)defaultConfigurationForQuality:(LFLiveVideoQuality)videoQuality landscape:(BOOL)landscape;
++ (instancetype)defaultConfigurationForQuality:(LFLiveVideoQuality)videoQuality outputImageOrientation:(UIInterfaceOrientation)outputImageOrientation;
 
 #pragma mark - Attribute
 ///=============================================================================
 /// @name Attribute
 ///=============================================================================
-/// 视频的分辨率，宽高务必设定为 2 的倍数，否则解码播放时可能出现绿边
+/// 视频的分辨率，宽高务必设定为 2 的倍数，否则解码播放时可能出现绿边(这个videoSizeRespectingAspectRatio设置为YES则可能会改变)
 @property (nonatomic, assign) CGSize videoSize;
 
+/// 输出图像是否等比例,默认为NO
+@property (nonatomic, assign) BOOL videoSizeRespectingAspectRatio;
+
 /// 视频输出方向
-@property (nonatomic, assign) BOOL landscape;
+@property (nonatomic, assign) UIInterfaceOrientation outputImageOrientation;
+
+/// 自动旋转(这里只支持 left 变 right  portrait 变 portraitUpsideDown)
+@property (nonatomic, assign) BOOL autorotate;
 
 /// 视频的帧率，即 fps
 @property (nonatomic, assign) NSUInteger videoFrameRate;
@@ -89,5 +95,8 @@ typedef NS_ENUM (NSUInteger, LFLiveVideoQuality){
 
 ///< ≈sde3分辨率
 @property (nonatomic, assign, readonly) NSString *avSessionPreset;
+
+///< 是否是横屏
+@property (nonatomic, assign, readonly) BOOL landscape;
 
 @end

@@ -2,13 +2,14 @@
 //  LFStreamingBuffer.h
 //  LFLiveKit
 //
-//  Created by 倾慕 on 16/5/2.
-//  Copyright © 2016年 倾慕. All rights reserved.
+//  Created by LaiFeng on 16/5/20.
+//  Copyright © 2016年 LaiFeng All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "LFAudioFrame.h"
 #import "LFVideoFrame.h"
+
 
 /** current buffer status */
 typedef NS_ENUM (NSUInteger, LFLiveBuffferState) {
@@ -26,6 +27,7 @@ typedef NS_ENUM (NSUInteger, LFLiveBuffferState) {
 @end
 
 @interface LFStreamingBuffer : NSObject
+
 
 /** The delegate of the buffer. buffer callback */
 @property (nullable, nonatomic, weak) id <LFStreamingBufferDelegate> delegate;

@@ -2,13 +2,15 @@
 //  LFLiveStreamInfo.h
 //  LFLiveKit
 //
-//  Created by 倾慕 on 16/5/2.
-//  Copyright © 2016年 倾慕. All rights reserved.
-//  真正的上传地址 token等
+//  Created by LaiFeng on 16/5/20.
+//  Copyright © 2016年 LaiFeng All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 #import "LFLiveAudioConfiguration.h"
 #import "LFLiveVideoConfiguration.h"
+
+
 
 /// 流状态
 typedef NS_ENUM (NSUInteger, LFLiveState){
@@ -21,7 +23,9 @@ typedef NS_ENUM (NSUInteger, LFLiveState){
     /// 已断开
     LFLiveStop = 3,
     /// 连接出错
-    LFLiveError = 4
+    LFLiveError = 4,
+    ///  正在刷新
+    LFLiveRefresh = 5
 };
 
 typedef NS_ENUM (NSUInteger, LFLiveSocketErrorCode) {
@@ -45,6 +49,5 @@ typedef NS_ENUM (NSUInteger, LFLiveSocketErrorCode) {
 @property (nonatomic, strong) LFLiveAudioConfiguration *audioConfiguration;
 ///视频配置
 @property (nonatomic, strong) LFLiveVideoConfiguration *videoConfiguration;
-
 
 @end

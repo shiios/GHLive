@@ -2,8 +2,8 @@
 //  LFVideoCapture.h
 //  LFLiveKit
 //
-//  Created by 倾慕 on 16/5/1.
-//  Copyright © 2016年 倾慕. All rights reserved.
+//  Created by LaiFeng on 16/5/20.
+//  Copyright © 2016年 LaiFeng All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,7 +13,7 @@
 @class LFVideoCapture;
 /** LFVideoCapture callback videoData */
 @protocol LFVideoCaptureDelegate <NSObject>
-- (void)captureOutput:(nullable LFVideoCapture *)capture pixelBuffer:(nullable CVImageBufferRef)pixelBuffer;
+- (void)captureOutput:(nullable LFVideoCapture *)capture pixelBuffer:(nullable CVPixelBufferRef)pixelBuffer;
 @end
 
 @interface LFVideoCapture : NSObject
@@ -55,6 +55,18 @@
 
 /** The videoFrameRate control videoCapture output data count */
 @property (nonatomic, assign) NSInteger videoFrameRate;
+
+/*** The warterMarkView control whether the watermark is displayed or not ,if set ni,will remove watermark,otherwise add *.*/
+@property (nonatomic, strong, nullable) UIView *warterMarkView;
+
+/* The currentImage is videoCapture shot */
+@property (nonatomic, strong, nullable) UIImage *currentImage;
+
+/* The saveLocalVideo is save the local video */
+@property (nonatomic, assign) BOOL saveLocalVideo;
+
+/* The saveLocalVideoPath is save the local video  path */
+@property (nonatomic, strong, nullable) NSURL *saveLocalVideoPath;
 
 #pragma mark - Initializer
 ///=============================================================================

@@ -2,14 +2,14 @@
 //  LFH264VideoEncoder
 //  LFLiveKit
 //
-//  Created by feng on 7/5/16.
-//  Copyright (c) 2014 zhanqi.tv. All rights reserved.
+//  Created by LaiFeng on 16/5/20.
+//  Copyright © 2016年 LaiFeng All rights reserved.
 //
 
 #import <CoreMedia/CoreMedia.h>
 #import <mach/mach_time.h>
-#import "NALUnit.h"
-#import "AVEncoder.h"
+#import "LFNALUnit.h"
+#import "LFAVEncoder.h"
 #import "LFH264VideoEncoder.h"
 #import "LFVideoFrame.h"
 
@@ -24,7 +24,7 @@
 @property (nonatomic) NSInteger currentVideoBitRate;
 @property (nonatomic, strong) dispatch_queue_t sendQueue;
 
-@property (nonatomic, strong) AVEncoder *encoder;
+@property (nonatomic, strong) LFAVEncoder *encoder;
 
 @property (nonatomic, strong) NSData *naluStartCode;
 @property (nonatomic, strong) NSMutableData *videoSPSandPPS;
@@ -60,7 +60,7 @@
     [self initForFilePath];
 #endif
     
-    _encoder = [AVEncoder encoderForHeight:_configuration.videoSize.height andWidth:_configuration.videoSize.width bitrate:_configuration.videoBitRate];
+    _encoder = [LFAVEncoder encoderForHeight:(int)_configuration.videoSize.height andWidth:(int)_configuration.videoSize.width bitrate:(int)_configuration.videoBitRate];
     [_encoder encodeWithBlock:^int(NSArray* dataArray, CMTimeValue ptsValue) {
         [self incomingVideoFrames:dataArray ptsValue:ptsValue];
         return 0;
@@ -85,8 +85,8 @@
     if (!config) {
         return;
     }
-    avcCHeader avcC((const BYTE*)[config bytes], [config length]);
-    SeqParamSet seqParams;
+    LFavcCHeader avcC((const BYTE*)[config bytes], (int)[config length]);
+    LFSeqParamSet seqParams;
     seqParams.Parse(avcC.sps());
     
     NSData* spsData = [NSData dataWithBytes:avcC.sps()->Start() length:avcC.sps()->Length()];
@@ -106,6 +106,8 @@
     [_videoSPSandPPS appendData:_naluStartCode];
     [_videoSPSandPPS appendData:ppsData];
 }
+
+
 
 - (void)setVideoBitRate:(NSInteger)videoBitRate{
     _currentVideoBitRate = videoBitRate;
@@ -162,7 +164,7 @@
     [totalFrames addObjectsFromArray:frames];
     
     NSMutableData *aggregateFrameData = [NSMutableData data];
-    BOOL hasKeyframe = NO;
+    //BOOL hasKeyframe = NO;
     
     for (NSData *data in totalFrames) {
         unsigned char* pNal = (unsigned char*)[data bytes];
@@ -174,7 +176,7 @@
             _sei = [NSMutableData dataWithData:data];
             continue;
         } else if (naltype == 5) { // IDR
-            hasKeyframe = YES;
+            //hasKeyframe = YES;
             NSMutableData *IDRData = [NSMutableData dataWithData:_videoSPSandPPS];
             if (_sei) {
                 [IDRData appendData:_naluStartCode];
@@ -246,25 +248,16 @@
 }
 
 - (void)initForFilePath {
-    char *path = [self GetFilePathByfileName:"IOSCamDemo.h264"];
-    NSLog(@"%s", path);
-    self->fp = fopen(path, "wb");
+    NSString *path = [self GetFilePathByfileName:@"IOSCamDemo.h264"];
+    NSLog(@"%@", path);
+    self->fp = fopen([path cStringUsingEncoding:NSUTF8StringEncoding], "wb");
 }
 
-- (char *)GetFilePathByfileName:(char *)filename {
+- (NSString *)GetFilePathByfileName:(NSString*)filename {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *strName = [NSString stringWithFormat:@"%s", filename];
-    
-    NSString *writablePath = [documentsDirectory stringByAppendingPathComponent:strName];
-    
-    NSUInteger len = [writablePath length];
-    
-    char *filepath = (char *)malloc(sizeof(char) * (len + 1));
-    
-    [writablePath getCString:filepath maxLength:len + 1 encoding:[NSString defaultCStringEncoding]];
-    
-    return filepath;
+    NSString *writablePath = [documentsDirectory stringByAppendingPathComponent:filename];
+    return writablePath;
 }
 
 @end

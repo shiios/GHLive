@@ -61,7 +61,12 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-x8-iwn">
                     <rect key="frame" x="157" y="617" width="62" height="30"/>
-                    <state key="normal" title="开启直播"/>
+                    <state key="normal" title="开启直播">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="didLiveBtnClick:" destination="-1" eventType="touchUpInside" id="spq-xd-izT"/>
                     </connections>
@@ -72,7 +77,7 @@
                         <constraint firstAttribute="width" constant="200" id="Z28-bu-OWb"/>
                         <constraint firstAttribute="height" constant="60" id="iyK-hb-fIB"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>

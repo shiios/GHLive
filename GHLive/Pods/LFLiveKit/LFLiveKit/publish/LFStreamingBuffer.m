@@ -2,14 +2,14 @@
 //  LFStreamingBuffer.m
 //  LFLiveKit
 //
-//  Created by 倾慕 on 16/5/2.
-//  Copyright © 2016年 倾慕. All rights reserved.
+//  Created by LaiFeng on 16/5/20.
+//  Copyright © 2016年 LaiFeng All rights reserved.
 //
 
 #import "LFStreamingBuffer.h"
 #import "NSMutableArray+LFAdd.h"
 
-static const NSUInteger defaultSortBufferMaxCount = 10;///< 排序10个内
+static const NSUInteger defaultSortBufferMaxCount = 5;///< 排序10个内
 static const NSUInteger defaultUpdateInterval = 1;///< 更新频率为1s
 static const NSUInteger defaultCallBackInterval = 5;///< 5s计时一次
 static const NSUInteger defaultSendBufferMaxCount = 600;///< 最大缓冲区为600
@@ -62,9 +62,7 @@ static const NSUInteger defaultSendBufferMaxCount = 600;///< 最大缓冲区为6
     } else {
         ///< 排序
         [self.sortList addObject:frame];
-        NSArray *sortedSendQuery = [self.sortList sortedArrayUsingFunction:frameDataCompare context:NULL];
-        [self.sortList removeAllObjects];
-        [self.sortList addObjectsFromArray:sortedSendQuery];
+		[self.sortList sortUsingFunction:frameDataCompare context:nil];
         /// 丢帧
         [self removeExpireFrame];
         /// 添加至缓冲区
@@ -97,14 +95,14 @@ static const NSUInteger defaultSendBufferMaxCount = 600;///< 最大缓冲区为6
         [self.list removeObjectsInArray:pFrames];
         return;
     }
-
+    
     NSArray *iFrames = [self expireIFrames];///<  删除一个I帧（但一个I帧可能对应多个nal）
     self.lastDropFrames += [iFrames count];
-    if (iFrames) {
+    if (iFrames && iFrames.count > 0) {
         [self.list removeObjectsInArray:iFrames];
         return;
     }
-
+    
     [self.list removeAllObjects];
 }
 
@@ -155,9 +153,9 @@ NSInteger frameDataCompare(id obj1, id obj2, void *context){
     NSInteger decreaseCount = 0;
 
     for (NSNumber *number in self.thresholdList) {
-        if (number.integerValue >= currentCount) {
+        if (number.integerValue > currentCount) {
             increaseCount++;
-        } else {
+        } else{
             decreaseCount++;
         }
         currentCount = [number integerValue];
@@ -170,7 +168,7 @@ NSInteger frameDataCompare(id obj1, id obj2, void *context){
     if (decreaseCount >= self.callBackInterval) {
         return LFLiveBuffferDecline;
     }
-
+    
     return LFLiveBuffferUnknown;
 }
 
@@ -204,7 +202,7 @@ NSInteger frameDataCompare(id obj1, id obj2, void *context){
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
     [self.thresholdList addObject:@(self.list.count)];
     dispatch_semaphore_signal(_lock);
-
+    
     if (self.currentInterval >= self.callBackInterval) {
         LFLiveBuffferState state = [self currentBufferState];
         if (state == LFLiveBuffferIncrease) {
@@ -222,7 +220,7 @@ NSInteger frameDataCompare(id obj1, id obj2, void *context){
     }
     __weak typeof(self) _self = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.updateInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        __weak typeof(_self) self = _self;
+        __strong typeof(_self) self = _self;
         [self tick];
     });
 }

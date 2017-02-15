@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3824D0811E54080400F3400B /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824D0801E54080400F3400B /* XRCarouselView.m */; };
+		3824D0861E5411DC00F3400B /* GHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824D0851E5411DC00F3400B /* GHTools.m */; };
 		388ED4E31E529702009BF47A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E21E529702009BF47A /* main.m */; };
 		388ED4E61E529702009BF47A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E51E529702009BF47A /* AppDelegate.m */; };
 		388ED4E91E529702009BF47A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E81E529702009BF47A /* ViewController.m */; };
@@ -45,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3824D07F1E54080400F3400B /* XRCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRCarouselView.h; sourceTree = "<group>"; };
+		3824D0801E54080400F3400B /* XRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCarouselView.m; sourceTree = "<group>"; };
+		3824D0821E54083C00F3400B /* GHLive-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GHLive-Prefix.pch"; sourceTree = "<group>"; };
+		3824D0831E540A0900F3400B /* GHConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHConstant.h; sourceTree = "<group>"; };
+		3824D0841E5411DC00F3400B /* GHTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTools.h; sourceTree = "<group>"; };
+		3824D0851E5411DC00F3400B /* GHTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTools.m; sourceTree = "<group>"; };
 		388ED4DE1E529702009BF47A /* GHLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388ED4E21E529702009BF47A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		388ED4E41E529702009BF47A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3824D07E1E54080400F3400B /* XRCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				3824D07F1E54080400F3400B /* XRCarouselView.h */,
+				3824D0801E54080400F3400B /* XRCarouselView.m */,
+			);
+			path = XRCarouselView;
+			sourceTree = "<group>";
+		};
 		388ED4D51E529702009BF47A = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +159,7 @@
 				388ED4ED1E529702009BF47A /* Assets.xcassets */,
 				388ED4EF1E529702009BF47A /* LaunchScreen.storyboard */,
 				388ED4F21E529702009BF47A /* Info.plist */,
+				3824D0821E54083C00F3400B /* GHLive-Prefix.pch */,
 				388ED4E11E529702009BF47A /* Supporting Files */,
 			);
 			path = GHLive;
@@ -200,6 +218,7 @@
 		388ED5231E529AF9009BF47A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3824D07E1E54080400F3400B /* XRCarouselView */,
 				388ED5641E52F079009BF47A /* GHHomeViewController.h */,
 				388ED5651E52F079009BF47A /* GHHomeViewController.m */,
 			);
@@ -238,6 +257,7 @@
 		388ED5271E529AF9009BF47A /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				3824D0831E540A0900F3400B /* GHConstant.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -272,6 +292,8 @@
 		388ED52B1E529AF9009BF47A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3824D0841E5411DC00F3400B /* GHTools.h */,
+				3824D0851E5411DC00F3400B /* GHTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -480,8 +502,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3824D0861E5411DC00F3400B /* GHTools.m in Sources */,
 				388ED56A1E52F0D1009BF47A /* GHShowTimeViewController.m in Sources */,
 				388ED5661E52F079009BF47A /* GHHomeViewController.m in Sources */,
+				3824D0811E54080400F3400B /* XRCarouselView.m in Sources */,
 				388ED4E91E529702009BF47A /* ViewController.m in Sources */,
 				388ED55A1E52E64A009BF47A /* GHNavViewController.m in Sources */,
 				388ED5571E52E498009BF47A /* Reachability.m in Sources */,
@@ -640,7 +664,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3L99Q7H8MX;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = "GHLive/GHLive-Prefix.pch";
 				INFOPLIST_FILE = GHLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLive;
@@ -656,7 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3L99Q7H8MX;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = "GHLive/GHLive-Prefix.pch";
 				INFOPLIST_FILE = GHLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaliankeji.com.GHLive;

@@ -2,14 +2,16 @@
 //  LFAudioEncoding.h
 //  LFLiveKit
 //
-//  Created by 倾慕 on 16/5/2.
-//  Copyright © 2016年 倾慕. All rights reserved.
+//  Created by LaiFeng on 16/5/20.
+//  Copyright © 2016年 LaiFeng All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import "LFAudioFrame.h"
 #import "LFLiveAudioConfiguration.h"
+
+
 
 @protocol LFAudioEncoding;
 /// 编码器编码后回调
@@ -21,7 +23,7 @@
 /// 编码器抽象的接口
 @protocol LFAudioEncoding <NSObject>
 @required
-- (void)encodeAudioData:(AudioBufferList)inBufferList timeStamp:(uint64_t)timeStamp;
+- (void)encodeAudioData:(nullable NSData*)audioData timeStamp:(uint64_t)timeStamp;
 - (void)stopEncoder;
 @optional
 - (nullable instancetype)initWithAudioStreamConfiguration:(nullable LFLiveAudioConfiguration *)configuration;

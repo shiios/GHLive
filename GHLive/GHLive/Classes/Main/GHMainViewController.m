@@ -37,9 +37,8 @@
     GHNavViewController *nav = [[GHNavViewController alloc] initWithRootViewController:childController];
     childController.tabBarItem.image = [UIImage imageNamed:imageName];
     childController.tabBarItem.selectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_sel", imageName]];
-    // 设置图片居中, 这儿需要注意top和bottom必须绝对值一样大
-    //childController.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
-    childController.tabBarItem.title = titleStr;
+    
+    [childController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: Color(110.0, 113.0, 117.0),} forState:UIControlStateNormal];
     [self addChildViewController:nav];
 }
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController

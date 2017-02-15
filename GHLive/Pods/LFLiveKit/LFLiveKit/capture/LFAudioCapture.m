@@ -2,8 +2,8 @@
 //  LFAudioCapture.m
 //  LFLiveKit
 //
-//  Created by 倾慕 on 16/5/1.
-//  Copyright © 2016年 倾慕. All rights reserved.
+//  Created by LaiFeng on 16/5/20.
+//  Copyright © 2016年 LaiFeng All rights reserved.
 //
 
 #import "LFAudioCapture.h"
@@ -18,61 +18,52 @@ NSString *const LFAudioComponentFailedToCreateNotification = @"LFAudioComponentF
 @property (nonatomic, assign) AudioComponent component;
 @property (nonatomic, strong) dispatch_queue_t taskQueue;
 @property (nonatomic, assign) BOOL isRunning;
-@property (nonatomic, strong) LFLiveAudioConfiguration *configuration;
+@property (nonatomic, strong,nullable) LFLiveAudioConfiguration *configuration;
 
 @end
 
 @implementation LFAudioCapture
 
 #pragma mark -- LiftCycle
-- (instancetype)initWithAudioConfiguration:(LFLiveAudioConfiguration *)configuration {
-    if (self = [super init]) {
+- (instancetype)initWithAudioConfiguration:(LFLiveAudioConfiguration *)configuration{
+    if(self = [super init]){
         _configuration = configuration;
         self.isRunning = NO;
         self.taskQueue = dispatch_queue_create("com.youku.Laifeng.audioCapture.Queue", NULL);
-
-        AVAudioSession *session = [AVAudioSession sharedInstance];
-        [session setActive:YES error:nil];
-
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(handleRouteChange:)
-                                                     name:AVAudioSessionRouteChangeNotification
-                                                   object:session];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(handleInterruption:)
-                                                     name:AVAudioSessionInterruptionNotification
-                                                   object:session];
-
-        NSError *error = nil;
-
-        [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
         
-        [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:nil];
-
-        if (![session setActive:YES error:&error]) {
-            [self handleAudioComponentCreationFailure];
-        }
-
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        
+        
+        [[NSNotificationCenter defaultCenter] addObserver: self
+                                                 selector: @selector(handleRouteChange:)
+                                                     name: AVAudioSessionRouteChangeNotification
+                                                   object: session];
+        [[NSNotificationCenter defaultCenter] addObserver: self
+                                                 selector: @selector(handleInterruption:)
+                                                     name: AVAudioSessionInterruptionNotification
+                                                   object: session];
+        
         AudioComponentDescription acd;
         acd.componentType = kAudioUnitType_Output;
-        acd.componentSubType = kAudioUnitSubType_VoiceProcessingIO;
+        //acd.componentSubType = kAudioUnitSubType_VoiceProcessingIO;
+        acd.componentSubType = kAudioUnitSubType_RemoteIO;
         acd.componentManufacturer = kAudioUnitManufacturer_Apple;
         acd.componentFlags = 0;
         acd.componentFlagsMask = 0;
-
+        
         self.component = AudioComponentFindNext(NULL, &acd);
-
+        
         OSStatus status = noErr;
         status = AudioComponentInstanceNew(self.component, &_componetInstance);
-
+        
         if (noErr != status) {
             [self handleAudioComponentCreationFailure];
         }
-
+        
         UInt32 flagOne = 1;
-
+        
         AudioUnitSetProperty(self.componetInstance, kAudioOutputUnitProperty_EnableIO, kAudioUnitScope_Input, 1, &flagOne, sizeof(flagOne));
-
+        
         AudioStreamBasicDescription desc = {0};
         desc.mSampleRate = _configuration.audioSampleRate;
         desc.mFormatID = kAudioFormatLinearPCM;
@@ -82,22 +73,23 @@ NSString *const LFAudioComponentFailedToCreateNotification = @"LFAudioComponentF
         desc.mBitsPerChannel = 16;
         desc.mBytesPerFrame = desc.mBitsPerChannel / 8 * desc.mChannelsPerFrame;
         desc.mBytesPerPacket = desc.mBytesPerFrame * desc.mFramesPerPacket;
-
+        
         AURenderCallbackStruct cb;
         cb.inputProcRefCon = (__bridge void *)(self);
         cb.inputProc = handleInputBuffer;
         AudioUnitSetProperty(self.componetInstance, kAudioUnitProperty_StreamFormat, kAudioUnitScope_Output, 1, &desc, sizeof(desc));
         AudioUnitSetProperty(self.componetInstance, kAudioOutputUnitProperty_SetInputCallback, kAudioUnitScope_Global, 1, &cb, sizeof(cb));
-
+        
         status = AudioUnitInitialize(self.componetInstance);
-
+        
         if (noErr != status) {
             [self handleAudioComponentCreationFailure];
         }
-
+        
         [session setPreferredSampleRate:_configuration.audioSampleRate error:nil];
-
-
+        [session setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker | AVAudioSessionCategoryOptionInterruptSpokenAudioAndMixWithOthers error:nil];
+        [session setActive:YES withOptions:kAudioSessionSetActiveFlag_NotifyOthersOnDeactivation error:nil];
+        
         [session setActive:YES error:nil];
     }
     return self;
@@ -108,6 +100,7 @@ NSString *const LFAudioComponentFailedToCreateNotification = @"LFAudioComponentF
 
     dispatch_sync(self.taskQueue, ^{
         if (self.componetInstance) {
+            self.isRunning = NO;
             AudioOutputUnitStop(self.componetInstance);
             AudioComponentInstanceDispose(self.componetInstance);
             self.componetInstance = nil;
@@ -124,10 +117,15 @@ NSString *const LFAudioComponentFailedToCreateNotification = @"LFAudioComponentF
         dispatch_async(self.taskQueue, ^{
             self.isRunning = YES;
             NSLog(@"MicrophoneSource: startRunning");
+            [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker | AVAudioSessionCategoryOptionInterruptSpokenAudioAndMixWithOthers error:nil];
             AudioOutputUnitStart(self.componetInstance);
         });
     } else {
-        self.isRunning = NO;
+        dispatch_sync(self.taskQueue, ^{
+            self.isRunning = NO;
+            NSLog(@"MicrophoneSource: stopRunning");
+            AudioOutputUnitStop(self.componetInstance);
+        });
     }
 }
 
@@ -198,7 +196,7 @@ NSString *const LFAudioComponentFailedToCreateNotification = @"LFAudioComponentF
             case AVAudioSessionInterruptionOptionShouldResume:
                 if (self.isRunning) {
                     dispatch_async(self.taskQueue, ^{
-                        NSLog(@"MicrophoneSource: stopRunning");
+                        NSLog(@"MicrophoneSource: startRunning");
                         AudioOutputUnitStart(self.componetInstance);
                     });
                 }
@@ -241,15 +239,6 @@ static OSStatus handleInputBuffer(void *inRefCon,
                                           inNumberFrames,
                                           &buffers);
 
-        if (!source.isRunning) {
-            dispatch_sync(source.taskQueue, ^{
-                NSLog(@"MicrophoneSource: stopRunning");
-                AudioOutputUnitStop(source.componetInstance);
-            });
-
-            return status;
-        }
-
         if (source.muted) {
             for (int i = 0; i < buffers.mNumberBuffers; i++) {
                 AudioBuffer ab = buffers.mBuffers[i];
@@ -258,8 +247,8 @@ static OSStatus handleInputBuffer(void *inRefCon,
         }
 
         if (!status) {
-            if (source.delegate && [source.delegate respondsToSelector:@selector(captureOutput:audioBuffer:)]) {
-                [source.delegate captureOutput:source audioBuffer:buffers];
+            if (source.delegate && [source.delegate respondsToSelector:@selector(captureOutput:audioData:)]) {
+                [source.delegate captureOutput:source audioData:[NSData dataWithBytes:buffers.mBuffers[0].mData length:buffers.mBuffers[0].mDataByteSize]];
             }
         }
         return status;
