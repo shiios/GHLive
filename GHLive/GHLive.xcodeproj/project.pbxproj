@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3824D0811E54080400F3400B /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824D0801E54080400F3400B /* XRCarouselView.m */; };
 		3824D0861E5411DC00F3400B /* GHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824D0851E5411DC00F3400B /* GHTools.m */; };
+		3824D08A1E556E0100F3400B /* NSSafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824D0891E556E0100F3400B /* NSSafeObject.m */; };
+		3824D08C1E55719600F3400B /* GHDanMu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3824D08B1E55719600F3400B /* GHDanMu.plist */; };
+		3824D08F1E557ABF00F3400B /* UIViewController+GHHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3824D08E1E557ABF00F3400B /* UIViewController+GHHUD.m */; };
+		3824D0911E55800C00F3400B /* GHLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3824D0901E55800C00F3400B /* GHLoginViewController.storyboard */; };
 		388ED4E31E529702009BF47A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E21E529702009BF47A /* main.m */; };
 		388ED4E61E529702009BF47A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E51E529702009BF47A /* AppDelegate.m */; };
 		388ED4E91E529702009BF47A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388ED4E81E529702009BF47A /* ViewController.m */; };
@@ -52,6 +56,12 @@
 		3824D0831E540A0900F3400B /* GHConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHConstant.h; sourceTree = "<group>"; };
 		3824D0841E5411DC00F3400B /* GHTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTools.h; sourceTree = "<group>"; };
 		3824D0851E5411DC00F3400B /* GHTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTools.m; sourceTree = "<group>"; };
+		3824D0881E556E0100F3400B /* NSSafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSafeObject.h; sourceTree = "<group>"; };
+		3824D0891E556E0100F3400B /* NSSafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSafeObject.m; sourceTree = "<group>"; };
+		3824D08B1E55719600F3400B /* GHDanMu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GHDanMu.plist; sourceTree = "<group>"; };
+		3824D08D1E557ABF00F3400B /* UIViewController+GHHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GHHUD.h"; sourceTree = "<group>"; };
+		3824D08E1E557ABF00F3400B /* UIViewController+GHHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GHHUD.m"; sourceTree = "<group>"; };
+		3824D0901E55800C00F3400B /* GHLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GHLoginViewController.storyboard; sourceTree = "<group>"; };
 		388ED4DE1E529702009BF47A /* GHLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388ED4E21E529702009BF47A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		388ED4E41E529702009BF47A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +133,15 @@
 			path = XRCarouselView;
 			sourceTree = "<group>";
 		};
+		3824D0871E556E0100F3400B /* SafeObject */ = {
+			isa = PBXGroup;
+			children = (
+				3824D0881E556E0100F3400B /* NSSafeObject.h */,
+				3824D0891E556E0100F3400B /* NSSafeObject.m */,
+			);
+			path = SafeObject;
+			sourceTree = "<group>";
+		};
 		388ED4D51E529702009BF47A = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +176,7 @@
 				388ED4ED1E529702009BF47A /* Assets.xcassets */,
 				388ED4EF1E529702009BF47A /* LaunchScreen.storyboard */,
 				388ED4F21E529702009BF47A /* Info.plist */,
+				3824D08B1E55719600F3400B /* GHDanMu.plist */,
 				3824D0821E54083C00F3400B /* GHLive-Prefix.pch */,
 				388ED4E11E529702009BF47A /* Supporting Files */,
 			);
@@ -228,6 +248,7 @@
 			children = (
 				388ED52C1E52E25E009BF47A /* GHLoginViewController.h */,
 				388ED52D1E52E25E009BF47A /* GHLoginViewController.m */,
+				3824D0901E55800C00F3400B /* GHLoginViewController.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -279,6 +300,7 @@
 		388ED52A1E529AF9009BF47A /* ShowTime */ = {
 			isa = PBXGroup;
 			children = (
+				3824D0871E556E0100F3400B /* SafeObject */,
 				388ED5671E52F0D1009BF47A /* GHShowTimeViewController.h */,
 				388ED5681E52F0D1009BF47A /* GHShowTimeViewController.m */,
 				388ED5691E52F0D1009BF47A /* GHShowTimeViewController.xib */,
@@ -291,6 +313,8 @@
 			children = (
 				3824D0841E5411DC00F3400B /* GHTools.h */,
 				3824D0851E5411DC00F3400B /* GHTools.m */,
+				3824D08D1E557ABF00F3400B /* UIViewController+GHHUD.h */,
+				3824D08E1E557ABF00F3400B /* UIViewController+GHHUD.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -422,6 +446,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3824D0911E55800C00F3400B /* GHLoginViewController.storyboard in Resources */,
+				3824D08C1E55719600F3400B /* GHDanMu.plist in Resources */,
 				388ED4F11E529702009BF47A /* LaunchScreen.storyboard in Resources */,
 				388ED4EE1E529702009BF47A /* Assets.xcassets in Resources */,
 				388ED4EC1E529702009BF47A /* Main.storyboard in Resources */,
@@ -499,6 +525,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3824D0861E5411DC00F3400B /* GHTools.m in Sources */,
+				3824D08F1E557ABF00F3400B /* UIViewController+GHHUD.m in Sources */,
+				3824D08A1E556E0100F3400B /* NSSafeObject.m in Sources */,
 				388ED56A1E52F0D1009BF47A /* GHShowTimeViewController.m in Sources */,
 				388ED5661E52F079009BF47A /* GHHomeViewController.m in Sources */,
 				3824D0811E54080400F3400B /* XRCarouselView.m in Sources */,

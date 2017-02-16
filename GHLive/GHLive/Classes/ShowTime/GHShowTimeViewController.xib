@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GHShowTimeViewController">
             <connections>
+                <outlet property="barrage" destination="fOS-bf-VuG" id="AB2-U8-leC"/>
                 <outlet property="beautyBtn" destination="4DL-al-WBX" id="4ya-ey-r2b"/>
                 <outlet property="captureBtn" destination="K9e-eR-79m" id="j4a-ZA-BkP"/>
                 <outlet property="closeBtn" destination="AbM-O6-Lfy" id="cxD-Ih-WeL"/>
@@ -82,6 +83,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-bf-VuG">
+                    <rect key="frame" x="152" y="22" width="70" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Bzu-TZ-KB0"/>
+                        <constraint firstAttribute="height" constant="30" id="Wv1-HL-aCe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="barrage start"/>
+                    <state key="selected" title="barrage close"/>
+                    <connections>
+                        <action selector="barrageBtnClick:" destination="-1" eventType="touchUpInside" id="5CL-E6-kQM"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -94,7 +108,9 @@
                 <constraint firstItem="1eT-4H-5Mx" firstAttribute="centerX" secondItem="K9e-eR-79m" secondAttribute="centerX" id="gEj-Gv-llu"/>
                 <constraint firstAttribute="trailing" secondItem="AbM-O6-Lfy" secondAttribute="trailing" constant="8" id="q3h-6H-sOp"/>
                 <constraint firstItem="AbM-O6-Lfy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="qdV-KA-TVX"/>
+                <constraint firstItem="fOS-bf-VuG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vuS-6C-B2z"/>
                 <constraint firstItem="4DL-al-WBX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="xn1-Oi-hyH"/>
+                <constraint firstItem="fOS-bf-VuG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="zDx-3A-iVI"/>
             </constraints>
             <point key="canvasLocation" x="42.5" y="59.5"/>
         </view>

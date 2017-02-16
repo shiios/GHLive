@@ -11,8 +11,8 @@
 
 #pragma mark - Frame相关
 // 屏幕宽/高
-#define ALinScreenWidth  [UIScreen mainScreen].bounds.size.width
-#define ALinScreenHeight [UIScreen mainScreen].bounds.size.height
+#define GHScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define GHScreenHeight [UIScreen mainScreen].bounds.size.height
 
 #pragma mark - 颜色
 // 颜色相关

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jgx-Ug-CIj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="cCa-0A-3st">
+            <objects>
+                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jgx-Ug-CIj" customClass="GHLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QEQ-gd-ybM"/>
+                        <viewControllerLayoutGuide type="bottom" id="187-Yf-Vp4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j4x-Eh-0OQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6V-2e-1aD">
+                                <rect key="frame" x="147" y="593" width="80" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6Tu-kC-QMv"/>
+                                    <constraint firstAttribute="width" constant="80" id="92t-mo-HRE"/>
+                                </constraints>
+                                <state key="normal" title="快速通道">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumpToHome:" destination="jgx-Ug-CIj" eventType="touchUpInside" id="HMA-8Y-7Ad"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="187-Yf-Vp4" firstAttribute="top" secondItem="C6V-2e-1aD" secondAttribute="bottom" constant="44" id="OqQ-4A-RFm"/>
+                            <constraint firstItem="C6V-2e-1aD" firstAttribute="centerX" secondItem="j4x-Eh-0OQ" secondAttribute="centerX" id="god-s8-mzb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quickLoad" destination="C6V-2e-1aD" id="Pim-Uf-Def"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2x-Un-yZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="-363"/>
+        </scene>
+    </scenes>
+</document>

@@ -23,8 +23,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    self.window.rootViewController = [[GHLoginViewController alloc] init];
+    //GHLoginViewController *login = [UIStoryboard storyboardWithName:@"GHLoginViewController" bundle:nil].instantiateInitialViewController;
+    GHLoginViewController *login = [[UIStoryboard storyboardWithName:@"GHLoginViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"login"];
+    self.window.rootViewController = login;
     
     [self.window makeKeyAndVisible];
     

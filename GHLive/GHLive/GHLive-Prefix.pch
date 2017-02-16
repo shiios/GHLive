@@ -22,6 +22,7 @@
 
 #import "XRCarouselView.h"
 #import "GHConstant.h"
+#import "UIViewController+GHHUD.h"
 
 #endif /* PrefixHeader_pch */
 
